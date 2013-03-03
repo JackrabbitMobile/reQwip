@@ -12,8 +12,8 @@ require.config({
 		holder : "libs/holder",
 		underscore : "libs/underscore-min",
 		backbone : "libs/backbone-min",
-		backfire : "libs/backbone-firebase.js",
-		firebase : "https://cdn.firebase.com/v0/firebase.js",
+		backfire : "libs/backbone-firebase",
+		firebase : "https://cdn.firebase.com/v0/firebase",
 		localstorage : "libs/backbone.localStorage-min"
 
 	},
@@ -22,15 +22,19 @@ require.config({
 	shim : {
 
 		backbone : {
-			deps : ["underscore", "jquery", "backfire", "firebase"],
+			deps : ["underscore", "jquery"],
 			exports : "Backbone" //attaches "Backbone" to the window object
 		},
 		bootstrap : {
 			deps : ["modernizr", "jquery", "holder"],
-			exports : "bootstrap"
+			exports : "Bootstrap"
 		},
 		underscore : {
 			exports : "_"
+		},
+		backfire : {
+			deps : ["bootstrap", "firebase"],
+			exports: "Backfire"
 		}
 
 	} // end Shim Configuration

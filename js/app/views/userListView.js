@@ -9,14 +9,18 @@ function($, _, Backbone, UserList, UserModel, UserView) {
 		template : _.template($("#user-list-template").html()),
 
 		initialize : function() {
-		 	 //	this.collection.on('add', this.render, this);
+		 	 this.collection.on('add', this.render, this);
 		 	 this.collection.on('reset', this.render, this);
 		 },
 
 		render : function() {
 			this.$el.html("")
 			this.collection.forEach(this.addOne, this);
-			
+			console.log(this.collection);
+			console.log(this.collection.length);
+			if (this.collection.length){
+				$("#page-loader").hide();
+			}
 			return this;
 		},
 		
@@ -33,10 +37,11 @@ function($, _, Backbone, UserList, UserModel, UserView) {
 		userDetails: function (event) {
 			var id = $(event.target).closest(".thumbnail").attr("data-id");
 			console.log("user-id: "+id);
-			
-      		this.userModel = new UserModel({'id': id+".json"});
+			console.log(this.collection.get(id));
+      		this.userModel = this.collection.get(id);
 			this.userView = new UserView({model: this.userModel});
-			this.userModel.fetch();
+			this.userView.render();
+			//this.userModel.fetch();
 		}
 
 	});

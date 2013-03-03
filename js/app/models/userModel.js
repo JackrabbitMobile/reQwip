@@ -1,14 +1,14 @@
 define(["jquery", "underscore", "backbone"], function($, _, Backbone) {
 
 	var UserModel = Backbone.Model.extend({
-	urlRoot: '/api-360ds.php/users',
 	defaults: function() {
 		return {
 			//'date' : new Date(),
 			
 			'email' : "your_email@here.com",
 			'name' : 'Firstname Lastname Here',
-			'profile_picture': "/img/3dslogo.png"
+			'profile_picture': "/img/3dslogo.png",
+			'participant_role': "role"
 		}
 	}
 });

@@ -23,20 +23,19 @@ define([
 		
 		initialize: function(){
 			console.log("$$$$$$ router init");
-					
 			
+			this.userList = new UserList();
+			// this.userModel = new UserModel();
+			// console.log(this.userModel);
+			//this.userList.add(this.userModel.toJSON());
 		},
 		start: function() {
 			Backbone.history.start({pushState: true});
 		},
 		index: function() {
-			this.userList = new UserList({model: UserModel});
+			
 			this.userListView = new UserListView({collection: this.userList});
-			this.userList.fetch({
-				success: function() {
-					$("#page-loader").hide();
-				}
-				});
+			
 		},
 		showUser: function(id) {
 			console.log("------ showuder: "+id);

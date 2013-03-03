@@ -9,10 +9,11 @@ function($, _, Backbone, UserModel) {
 		template : _.template($("#user-template").html()),
 
 		 initialize : function() {
-			 this.model.on('change', this.render, this);
+		 	console.log("init userview");
+			this.model.on('change', this.render, this);
 		 }, 
 
-		render : function() {
+		render : function(model) {
 			console.log('render...');
 			var attributes = this.model.toJSON();
 			console.dir(attributes);
@@ -40,12 +41,15 @@ function($, _, Backbone, UserModel) {
 			console.log("modelView.event.close");
 			var value = this.input.val();
 			if (!value) {
+				console.log("clear");
 				this.clear();
 			} else {
-				this.model.save({
+				console.log(this.body);
+				this.model.set({
 					email : value
 				});
-				this.$el.removeClass("editing");
+				this.body.removeClass("editing");
+				
 			}
 		},
 
