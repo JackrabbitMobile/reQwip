@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html class=" js no-flexbox flexbox-legacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Help</title>
+    <link href="Help_files/site.css" rel="stylesheet">
+
+    <script src="Help_files/modernizr-2.js"></script>
+
+    <link href="Help_files/jquery-ui-1.css" rel="stylesheet">
+
+</head>    
+    
+
+<body>   
+     <script src="Help_files/jquery-1.js"></script>
+
+     
+    <script src="Help_files/jquery-ui-1.js"></script>
+
+    <script type="text/javascript">
+        // Apply jQuery accordion widget.
+        $(function () { $(".accordion").accordion(); });
+        </script>
+
+
+    <div id="menucontainer">
+        <ul id="menu">
+            <li><a href="http://localhost:17247/">Home</a></li>
+            <li><a href="http://localhost:17247/Listing">Data Management</a></li>
+            <li><a href="http://localhost:17247/Help">API</a></li>
+        </ul>
+    </div>
+    <div>
+        
+
+
+<div id="body" class="content-wrapper">
+<h2>API Help</h2>
+
+
+        <h3>Size</h3>
+        <div role="tablist" class="accordion ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
+            <h4 tabindex="0" aria-selected="true" aria-expanded="true" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"><span class="ui-icon ui-icon-triangle-1-s"></span><a tabindex="-1" href="#">GET api/Size</a></h4>
+            <div role="tabpanel" style="height: 254.067px;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"><p>Gets all sizes.</p>
+            <ul>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>[<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Women's&nbsp;Large"<br>&nbsp;&nbsp;}<br>]</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">GET api/Size/{id}</a></h4>
+            <div role="tabpanel" style="height: 254.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Gets a size by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the size.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>{<br>&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>}</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">PUT api/Size/{id}</a></h4>
+            <div role="tabpanel" style="height: 254.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Updates a size by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the size.</li>
+                    <li><em>size</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">POST api/Size</a></h4>
+            <div role="tabpanel" style="height: 254.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Creates a new size.</p>
+            <ul>
+                    <li><em>size</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">DELETE api/Size/{id}</a></h4>
+            <div role="tabpanel" style="height: 254.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Deletes a size by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the size.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+        </div>
+        <h3>Listing</h3>
+        <div role="tablist" class="accordion ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
+            <h4 tabindex="0" aria-selected="true" aria-expanded="true" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"><span class="ui-icon ui-icon-triangle-1-s"></span><a tabindex="-1" href="#">GET api/Listing</a></h4>
+            <div role="tabpanel" style="height: 2188.07px;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"><p>Gets all listings.</p>
+            <ul>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>[<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;1,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Price":&nbsp;100.0,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Description":&nbsp;"Shit&nbsp;fuck&nbsp;im&nbsp;so&nbsp;tired",<br>&nbsp;&nbsp;&nbsp;&nbsp;"CategoryId":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;"SubCategoryId":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;"LocationId":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;"ConditionId":&nbsp;2,<br>&nbsp;&nbsp;&nbsp;&nbsp;"SizeId":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;"SportId":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Category":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Apparel",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SubCategories":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"T-shirts/Jerseys",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Women's&nbsp;Large"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Equipment",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"SubCategory":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"T-shirts/Jerseys",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Women's&nbsp;Large"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"Location":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Home",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Address":&nbsp;"1013&nbsp;Silbury&nbsp;Dr.",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"City":&nbsp;"Austin",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Zipcode":&nbsp;"78758",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"StateId":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"State":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Abbreviation":&nbsp;"TX",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Texas"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"Condition":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;2,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"New"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"Size":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"Sport":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Bicycling",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Categories":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Apparel",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SubCategories":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"T-shirts/Jerseys",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Women's&nbsp;Large"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Equipment",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;2,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Parts",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SubCategories":&nbsp;[]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>]</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">GET api/Listing/{id}</a></h4>
+            <div role="tabpanel" style="height: 2188.07px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Gets a listing by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the listing.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>{<br>&nbsp;&nbsp;"Id":&nbsp;1,<br>&nbsp;&nbsp;"Price":&nbsp;100.0,<br>&nbsp;&nbsp;"Description":&nbsp;"Shit&nbsp;fuck&nbsp;im&nbsp;so&nbsp;tired",<br>&nbsp;&nbsp;"CategoryId":&nbsp;5,<br>&nbsp;&nbsp;"SubCategoryId":&nbsp;3,<br>&nbsp;&nbsp;"LocationId":&nbsp;3,<br>&nbsp;&nbsp;"ConditionId":&nbsp;2,<br>&nbsp;&nbsp;"SizeId":&nbsp;3,<br>&nbsp;&nbsp;"SportId":&nbsp;4,<br>&nbsp;&nbsp;"Category":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Apparel",<br>&nbsp;&nbsp;&nbsp;&nbsp;"SubCategories":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"T-shirts/Jerseys",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Women's&nbsp;Large"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Equipment",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;"SubCategory":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"T-shirts/Jerseys",<br>&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Women's&nbsp;Large"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;"Location":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Home",<br>&nbsp;&nbsp;&nbsp;&nbsp;"Address":&nbsp;"1013&nbsp;Silbury&nbsp;Dr.",<br>&nbsp;&nbsp;&nbsp;&nbsp;"City":&nbsp;"Austin",<br>&nbsp;&nbsp;&nbsp;&nbsp;"Zipcode":&nbsp;"78758",<br>&nbsp;&nbsp;&nbsp;&nbsp;"StateId":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;"State":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Abbreviation":&nbsp;"TX",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Texas"<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;"Condition":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;2,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"New"<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;"Size":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;"Sport":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Bicycling",<br>&nbsp;&nbsp;&nbsp;&nbsp;"Categories":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Apparel",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SubCategories":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"T-shirts/Jerseys",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Women's&nbsp;Large"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Equipment",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;2,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Parts",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SubCategories":&nbsp;[]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;}<br>}</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">PUT api/Listing/{id}</a></h4>
+            <div role="tabpanel" style="height: 2188.07px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Updates a listing by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the listing.</li>
+                    <li><em>listing</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">POST api/Listing</a></h4>
+            <div role="tabpanel" style="height: 2188.07px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Creates a new listing.</p>
+            <ul>
+                    <li><em>listing</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">DELETE api/Listing/{id}</a></h4>
+            <div role="tabpanel" style="height: 2188.07px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Deletes a listing by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the listing.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+        </div>
+        <h3>Sport</h3>
+        <div role="tablist" class="accordion ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
+            <h4 tabindex="0" aria-selected="true" aria-expanded="true" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"><span class="ui-icon ui-icon-triangle-1-s"></span><a tabindex="-1" href="#">GET api/Sport</a></h4>
+            <div role="tabpanel" style="height: 899.067px;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"><p>Gets all sports.</p>
+            <ul>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>[<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Bicycling",<br>&nbsp;&nbsp;&nbsp;&nbsp;"Categories":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Apparel",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SubCategories":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"T-shirts/Jerseys",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Women's&nbsp;Large"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Equipment",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;2,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Parts",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SubCategories":&nbsp;[]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Hockey",<br>&nbsp;&nbsp;&nbsp;&nbsp;"Categories":&nbsp;[]<br>&nbsp;&nbsp;}<br>]</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">GET api/Sport/{id}</a></h4>
+            <div role="tabpanel" style="height: 899.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Gets a sport by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the sport.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>{<br>&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;"Name":&nbsp;"Bicycling",<br>&nbsp;&nbsp;"Categories":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Apparel",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SubCategories":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"T-shirts/Jerseys",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Women's&nbsp;Large"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Equipment",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;2,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Parts",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SubCategories":&nbsp;[]<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;]<br>}</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">PUT api/Sport/{id}</a></h4>
+            <div role="tabpanel" style="height: 899.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Updates a sport by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the sport.</li>
+                    <li><em>sport</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">POST api/Sport</a></h4>
+            <div role="tabpanel" style="height: 899.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Creates a new sport.</p>
+            <ul>
+                    <li><em>sport</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">DELETE api/Sport/{id}</a></h4>
+            <div role="tabpanel" style="height: 899.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Deletes a sport by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the sport.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+        </div>
+        <h3>SubCategory</h3>
+        <div role="tablist" class="accordion ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
+            <h4 tabindex="0" aria-selected="true" aria-expanded="true" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"><span class="ui-icon ui-icon-triangle-1-s"></span><a tabindex="-1" href="#">GET api/SubCategory</a></h4>
+            <div role="tabpanel" style="height: 469.067px;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"><p>Gets all subcategories.</p>
+            <ul>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>[<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"T-shirts/Jerseys",<br>&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Women's&nbsp;Large"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Equipment",<br>&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[]<br>&nbsp;&nbsp;}<br>]</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">GET api/SubCategory/{id}</a></h4>
+            <div role="tabpanel" style="height: 469.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Gets a subcategory by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the subcategory.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>{<br>&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;"Name":&nbsp;"T-shirts/Jerseys",<br>&nbsp;&nbsp;"Sizes":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Women's&nbsp;Large"<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;]<br>}</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">PUT api/SubCategory/{id}</a></h4>
+            <div role="tabpanel" style="height: 469.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Updates a subcategory by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the subcategory.</li>
+                    <li><em>subcategory</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">POST api/SubCategory</a></h4>
+            <div role="tabpanel" style="height: 469.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Creates a new subcategory.</p>
+            <ul>
+                    <li><em>subcategory</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">DELETE api/SubCategory/{id}</a></h4>
+            <div role="tabpanel" style="height: 469.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Deletes a subcategory by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the subcategory.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+        </div>
+        <h3>State</h3>
+        <div role="tablist" class="accordion ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
+            <h4 tabindex="0" aria-selected="true" aria-expanded="true" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"><span class="ui-icon ui-icon-triangle-1-s"></span><a tabindex="-1" href="#">GET api/State</a></h4>
+            <div role="tabpanel" style="height: 293.067px;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"><p>Gets all states.</p>
+            <ul>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>[<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Abbreviation":&nbsp;"TX",<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Texas"<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;9,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Abbreviation":&nbsp;"NY",<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"New&nbsp;York"<br>&nbsp;&nbsp;}<br>]</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">GET api/State/{id}</a></h4>
+            <div role="tabpanel" style="height: 293.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Gets a state by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the state.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>{<br>&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;"Abbreviation":&nbsp;"TX",<br>&nbsp;&nbsp;"Name":&nbsp;"Texas"<br>}</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">PUT api/State/{id}</a></h4>
+            <div role="tabpanel" style="height: 293.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Updates a state by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the state.</li>
+                    <li><em>state</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">POST api/State</a></h4>
+            <div role="tabpanel" style="height: 293.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Creates a new state.</p>
+            <ul>
+                    <li><em>state</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">DELETE api/State/{id}</a></h4>
+            <div role="tabpanel" style="height: 293.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Deletes a state by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the state.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+        </div>
+        <h3>Category</h3>
+        <div role="tablist" class="accordion ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
+            <h4 tabindex="0" aria-selected="true" aria-expanded="true" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"><span class="ui-icon ui-icon-triangle-1-s"></span><a tabindex="-1" href="#">GET api/Category</a></h4>
+            <div role="tabpanel" style="height: 684.067px;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"><p>Gets all categories.</p>
+            <ul>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>[<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Apparel",<br>&nbsp;&nbsp;&nbsp;&nbsp;"SubCategories":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"T-shirts/Jerseys",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Women's&nbsp;Large"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Equipment",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;2,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Parts",<br>&nbsp;&nbsp;&nbsp;&nbsp;"SubCategories":&nbsp;[]<br>&nbsp;&nbsp;}<br>]</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">GET api/Category/{id}</a></h4>
+            <div role="tabpanel" style="height: 684.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Gets a category by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the category.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>{<br>&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;"Name":&nbsp;"Apparel",<br>&nbsp;&nbsp;"SubCategories":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"T-shirts/Jerseys",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Men's&nbsp;Small"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Women's&nbsp;Large"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;4,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Equipment",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Sizes":&nbsp;[]<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;]<br>}</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">PUT api/Category/{id}</a></h4>
+            <div role="tabpanel" style="height: 684.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Updates a category by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the category.</li>
+                    <li><em>category</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">POST api/Category</a></h4>
+            <div role="tabpanel" style="height: 684.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Creates a new category.</p>
+            <ul>
+                    <li><em>category</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">DELETE api/Category/{id}</a></h4>
+            <div role="tabpanel" style="height: 684.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Deletes a category by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the category.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+        </div>
+        <h3>Condition</h3>
+        <div role="tablist" class="accordion ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
+            <h4 tabindex="0" aria-selected="true" aria-expanded="true" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"><span class="ui-icon ui-icon-triangle-1-s"></span><a tabindex="-1" href="#">GET api/Condition</a></h4>
+            <div role="tabpanel" style="height: 254.067px;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"><p>Gets all conditions.</p>
+            <ul>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>[<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;2,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"New"<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Used"<br>&nbsp;&nbsp;}<br>]</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">GET api/Condition/{id}</a></h4>
+            <div role="tabpanel" style="height: 254.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Gets a condition by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the condition.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>{<br>&nbsp;&nbsp;"Id":&nbsp;2,<br>&nbsp;&nbsp;"Name":&nbsp;"New"<br>}</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">PUT api/Condition/{id}</a></h4>
+            <div role="tabpanel" style="height: 254.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Updates a condition by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the condition.</li>
+                    <li><em>condition</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">POST api/Condition</a></h4>
+            <div role="tabpanel" style="height: 254.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Creates a new condition.</p>
+            <ul>
+                    <li><em>condition</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">DELETE api/Condition/{id}</a></h4>
+            <div role="tabpanel" style="height: 254.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Deletes a condition by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the condition.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+        </div>
+        <h3>Location</h3>
+        <div role="tablist" class="accordion ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
+            <h4 tabindex="0" aria-selected="true" aria-expanded="true" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"><span class="ui-icon ui-icon-triangle-1-s"></span><a tabindex="-1" href="#">GET api/Location</a></h4>
+            <div role="tabpanel" style="height: 352.067px;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"><p>Gets all locations.</p>
+            <ul>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>[<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Home",<br>&nbsp;&nbsp;&nbsp;&nbsp;"Address":&nbsp;"1013&nbsp;Silbury&nbsp;Dr.",<br>&nbsp;&nbsp;&nbsp;&nbsp;"City":&nbsp;"Austin",<br>&nbsp;&nbsp;&nbsp;&nbsp;"Zipcode":&nbsp;"78758",<br>&nbsp;&nbsp;&nbsp;&nbsp;"StateId":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;"State":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Abbreviation":&nbsp;"TX",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Texas"<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>]</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">GET api/Location/{id}</a></h4>
+            <div role="tabpanel" style="height: 352.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Gets a location by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the location.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code>{<br>&nbsp;&nbsp;"Id":&nbsp;3,<br>&nbsp;&nbsp;"Name":&nbsp;"Home",<br>&nbsp;&nbsp;"Address":&nbsp;"1013&nbsp;Silbury&nbsp;Dr.",<br>&nbsp;&nbsp;"City":&nbsp;"Austin",<br>&nbsp;&nbsp;"Zipcode":&nbsp;"78758",<br>&nbsp;&nbsp;"StateId":&nbsp;5,<br>&nbsp;&nbsp;"State":&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"Id":&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;"Abbreviation":&nbsp;"TX",<br>&nbsp;&nbsp;&nbsp;&nbsp;"Name":&nbsp;"Texas"<br>&nbsp;&nbsp;}<br>}</code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">PUT api/Location/{id}</a></h4>
+            <div role="tabpanel" style="height: 352.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Updates a location by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the location.</li>
+                    <li><em>location</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">POST api/Location</a></h4>
+            <div role="tabpanel" style="height: 352.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Creates a new location.</p>
+            <ul>
+                    <li><em>location</em> (FromBody): </li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+            <h4 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#">DELETE api/Location/{id}</a></h4>
+            <div role="tabpanel" style="height: 352.067px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"><p>Deletes a location by id.</p>
+            <ul>
+                    <li><em>id</em> (FromUri): The id of the location.</li>
+                
+            </ul>
+
+                 <p>Sample response body:</p>
+                 <div><code></code></div>
+            </div>
+        </div>
+</div>
+
+    </div>
+
+
+</body></html>
