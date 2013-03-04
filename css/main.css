@@ -10,6 +10,24 @@ margin-top: 40px;
 margin-bottom: 90px;
 }
 
+.btn.homepage{
+	display: none;
+}
+#listingResults {
+	list-style: none;
+}
+#listingResults a {
+	width: 100%;
+}
+#listingResults h4 {
+	margin: 0;
+}
+#listingResults img {
+	width:150px;
+	float: left;
+	margin-right: 10px;
+}
+
 #myModal .editing .view,  #myModal .edit{
     display: none;
 }
