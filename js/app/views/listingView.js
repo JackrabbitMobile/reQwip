@@ -12,25 +12,29 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 		  initialize : function() {
 		  	console.log("init listingview");
 		  	this.listingResults = new ListingResults();
-		  	
-		 	//this.model.on('change', this.render, this);
+		  	//this.model.on('change', this.render, this);
 			this.render();
 			return this;
 		  }, 
 		render : function(model) {
-			$("#page-loader").show();
-    		this.$el.html(this.template_homepage());
-    		$("#page-loader").hide();
+			this.homepage();
     		
 			return this;
 		},
 		
 		events: {
-			"click .brand" : "render",
+			"click .homepage" : "homepage",
 			"click .submit-form" : "saveListing",
 			"click #list-item" : "listItem",
 			"click #listing-results" : "allListings",
 			"click #listingResults a" : "displayListing"
+		},
+		homepage: function() {
+			console.log("on the homepage")
+			$("#page-loader").show();
+    		this.$el.html(this.template_homepage());
+    		$("#page-loader").hide();
+			return this;
 		},
 		listItem: function() {
 			$("#page-loader").show();
@@ -45,7 +49,7 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 				}
     		}).render();
     		this.$el.html(this.form.el);
-    		this.$el.append('<button class="btn btn-primary submit-form" type="button">Save</button>');
+    		this.$el.append('<a class="btn btn-primary submit-form" type="button">Save</a>');
     		
     		this.upoadImageField();
     		//this.uploadPicture
@@ -54,7 +58,7 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 		},
 		allListings : function() {
 			$("#page-loader").show();
-			this.$el.html("<ul id='listingResults' class'thumbnails'></ul>");
+			this.$el.html("<botton class='btn btn-small hompage'><i class='icon-home'></i></botton><ul id='listingResults' class'thumbnails'></ul>");
 			this.ul = $("#listingResults");
 			this.listingResults.forEach(this.listingHit, this);
 			$("#page-loader").hide();
