@@ -6,7 +6,8 @@ a {
 }
 
 #content {
-margin-top: 60px;
+margin-top: 40px;
+margin-bottom: 90px;
 }
 
 #myModal .editing .view,  #myModal .edit{
@@ -157,3 +158,32 @@ input[type="color"]:focus,
 	float:left;
 	padding: 5px 15px;
 }
+
+.fixed-bottom {
+	background: #333;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 0px 20px;
+	margin-left: -20px;
+	margin-bottom: -20px;
+}
+
+.fixed-bottom form p {
+	background: #333;
+	display: inline;
+	margin-right: 10px;
+}
+
+.fixed-bottom form {
+	text-align: center;
+	background: #333;
+	color: #fff;
+}
+
+.fixed-bottom .row-fluid {
+	background: #333;
+	margin: 20px 0px;
+}
+
