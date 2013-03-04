@@ -5,7 +5,7 @@ var ListingModel = Backbone.Model.extend({
 	defaults: function() {
 		return {
 			//'date' : new Date(),
-			'catagory' : "your_email@here.com",
+			'category' : "your_email@here.com",
 			'title' : 'Firstname Lastname Here',
 			'listingPicture': "http://reqwip.jackrabbitmobile.com/img/images.jpeg",
 			'price': 200,

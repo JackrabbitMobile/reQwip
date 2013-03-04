@@ -21,7 +21,7 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 		render : function(model) {
 			this.form = new Backbone.Form({
         		schema: {
-					catagory:      { type: 'Select', options: ['Road Bike', 'Mountain Bike', 'Touring Bike', 'Racing Bike', 'Cruser Bike', 'Clown Bike'] },
+					category: { type: 'Select', options: ['Road Bike', 'Mountain Bike', 'Touring Bike', 'Racing Bike', 'Cruser Bike', 'Clown Bike'] },
 			    	title: 'Text',
 			        price: 'Number',
 			        listingPicture: "Text", // { type: 'List', listType: 'Text' },
@@ -32,7 +32,8 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
     		this.$el.html(this.form.el);
     		this.$el.append('<button class="btn btn-primary submit-form" type="button">Save</button>');
     		
-    		this.uploadPicture
+    		this.upoadImageField();
+    		//this.uploadPicture
     		$("#page-loader").hide();
     		
 			return this;
@@ -55,8 +56,10 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 			this.$el.html(this.template(attributes));
 				
 		},
-		upoadImage : function () {
-				
+		upoadImageField : function () {
+			console.log("upload image")
+			$('#listingPicture').after('<button class="btn btn-primary submit-form" type="button">Add image</button>');
+			$('#listingPicture').hide();	
 			$('#listingPicture').click(onUploadClick);
 			
 			function onSuccess(fpfiles) {
