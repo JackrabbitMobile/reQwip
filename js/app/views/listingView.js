@@ -48,7 +48,11 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 		},
 		events: {
 			"click .submit-form" : "saveListing",
-			"click #list-item" : "listItem"
+			"click #list-item" : "listItem",
+			"click #listing-results" : "allListings"
+		},
+		allListings : function() {
+			return this;
 		},
 		saveListing : function() {
 			console.log("viewListing");
