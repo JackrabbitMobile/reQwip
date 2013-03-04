@@ -15,7 +15,7 @@ require.config({
 		backfire : "libs/backbone-firebase",
 		backbone_forms : "libs/backbone-forms.min",
 		list : "libs/list.min",
-		filepicker : "http://api.filepicker.io/v1/filepicker.js"
+		filepicker : "http://api.filepicker.io/v1/filepicker",
 		firebase : "https://cdn.firebase.com/v0/firebase",
 		localstorage : "libs/backbone.localStorage-min"
 

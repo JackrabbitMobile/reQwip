@@ -31,6 +31,8 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
     		}).render();
     		this.$el.html(this.form.el);
     		this.$el.append('<button class="btn btn-primary submit-form" type="button">Save</button>');
+    		
+    		this.uploadPicture
     		$("#page-loader").hide();
     		
 			return this;
@@ -52,6 +54,26 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 			attributes = this.listingModel.toJSON();
 			this.$el.html(this.template(attributes));
 				
+		},
+		upoadImage : function () {
+				
+			$('#listingPicture').click(onUploadClick);
+			
+			function onSuccess(fpfiles) {
+				console.log(JSON.stringify(fpfiles));
+				$('#Picture').append($(document.createElement('img')).attr("src",fpfiles[0]['url']));
+			}
+			function onError(fperror) {
+				console.log(JSON.stringify(fperror));
+				alert("There was an error.  check console");
+			}
+			function onUploadClick() {
+				filepicker.setKey('A2IsGFA5NTLW40qux7u6Qz');
+				filepicker.pickAndStore({mimetype:"image/*"},
+										{location:"S3"}, 
+										onSuccess,
+										onError);
+			}
 		}
 		
 		/*,

@@ -8,11 +8,11 @@
   // Todo Model
   // ----------
 define([
-	"jquery", "underscore", "backbone", 
+	"jquery", "underscore", "backbone", "filepicker",
 	"app/models/listingModel", "app/models/userModel", 
 	"app/collections/listingResults", "app/collections/userList", 
 	"app/views/listingView", "app/views/listingResultsView", "app/views/userView", "app/views/userListView"
-], function($, _, Backbone, 
+], function($, _, Backbone, filepicker,
 	ListingModel, UserModel, 
 	ListingResults, UserList, 
 	ListingView, ListingResultsView, UserView, UserListView) {
