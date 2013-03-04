@@ -11,6 +11,7 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 		  initialize : function() {
 		  	console.log("init listingview");
 		  	this.listingResults = new ListingResults();
+		  
 		  	this.listingModel = new ListingModel({id: '1'});
     		
 		  	
@@ -58,13 +59,18 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 		},
 		upoadImageField : function () {
 			console.log("upload image")
-			$('#listingPicture').after('<button class="btn btn-primary submit-form" type="button">Add image</button>');
-			$('#listingPicture').hide();	
-			$('#listingPicture').click(onUploadClick);
+			$('#listingPicture').after('<img src="" id="listing-img-tag" class="thumbnail" /><button id="image-upload-btn" class="btn btn-primary" type="button">Add image</button>');
+			$('#image-upload-btn').hide();	
+			$('#image-upload-btn').click(onUploadClick);
 			
 			function onSuccess(fpfiles) {
 				console.log(JSON.stringify(fpfiles));
-				$('#Picture').append($(document.createElement('img')).attr("src",fpfiles[0]['url']));
+				 $(document.createElement('img')).attr("src",fpfiles[0]['url']);
+				var img_url = fpfiles[0]['url'];
+				console.log(img_url);
+				console.log(encodeURI(img_url));
+				$("#listingPicture").val(img_url);
+				$('#image-upload-btn').before('<img src="'+img_url+'" class="thumbnail" />');
 			}
 			function onError(fperror) {
 				console.log(JSON.stringify(fperror));
