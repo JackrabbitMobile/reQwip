@@ -42,7 +42,15 @@
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen" />
 		<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+		
+		<!-- Google web fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
+		
+		<!-- Custom css -->
 		<link rel="stylesheet" href="css/main.css" />
+		
+		
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
@@ -59,25 +67,16 @@
 				<div class="navbar navbar-fixed-top">
 				  <div class="navbar-inner">
   				    <ul class="nav">
-					  <li><a href="#">My Account</a></li>
-  				      <li><a href="#">Log Out</a></li>
+					  <li><a href="#"><i class="icon-user"></i> My Account</a></li>
+					  <li><a href="#" id="facebook-auth-login" onclick="facebookLogin()"><i class="icon-off"></i> Log In</a></li>
   				    </ul>
-				    <a class="brand" href="#"><img src="img/reqwip_black.png"></a>
+					<a class="brand" href="#"><img src="img/reqwip_black.png"></a>
 				  </div>
 				</div>
 			</header>
 			<div class="row-fluid">
 				<div id="content">
 					
-					<h1>reQwip - AWwwwSOME sports gear!!!</h1> <h2>Dan will give you a hug!</h2>
-					<h1>nothing new</h1>
-					<ul id="user-list" class="thumbnails">
-						<li><h1>same old list</h1></li>
-					</ul>
-				</div>
-				<img src="img/images.jpeg" />
-				<div id="facebook-auth">
-					<button id="facebook-auth-login" onclick="facebookLogin()">Log in with Facebook</button>
 				</div>
 			</div>
 

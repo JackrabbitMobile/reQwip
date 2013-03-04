@@ -28,6 +28,10 @@ a {
 /* ==========================================================================
    Overide bootstap styles
    ========================================================================== */
+.navbar {
+	font-family: 'Lemon', cursive;
+}
+
 .thumbnail {
 	display: inline-table;
 }
@@ -58,6 +62,7 @@ body {
 
 #content {
 	color: #fff;
+	font-family:'Poiret One', cursive;
 }
 
 textarea:focus,
