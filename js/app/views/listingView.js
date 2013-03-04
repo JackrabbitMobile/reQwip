@@ -20,13 +20,14 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 			this.render();
 		  }, 
 		render : function(model) {
-			
+			$("#page-loader").show();
     		this.$el.html(this.template_homepage());
     		$("#page-loader").hide();
     		
 			return this;
 		},
 		listItem: function() {
+			$("#page-loader").show();
 			this.form = new Backbone.Form({
         		schema: {
 					category: { type: 'Select', options: ['Road Bike', 'Mountain Bike', 'Touring Bike', 'Racing Bike', 'Cruser Bike', 'Clown Bike'] },
@@ -51,12 +52,13 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 		},
 		saveListing : function() {
 			console.log("viewListing");
-			
+			$("#page-loader").show();
 			this.listingModel.set(this.form.getValue());
 			console.log(this.listingModel);
 			this.listingResults.add(this.listingModel); 
 			
 			this.displayListing();
+			$("#page-loader").hide();
 			return this;
 		},
 		displayListing : function() {
