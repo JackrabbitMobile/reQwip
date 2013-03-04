@@ -9,9 +9,13 @@
   // ----------
 define([
 	"jquery", "underscore", "backbone", 
-	"app/models/userModel", "app/models/listingModel", "app/collections/userList", "app/views/userView", "app/views/userListView"
+	"app/models/listingModel", "app/models/userModel", 
+	"app/collections/listingResults", "app/collections/userList", 
+	"app/views/listingView", "app/views/listingResultsView", "app/views/userView", "app/views/userListView"
 ], function($, _, Backbone, 
-	UserModel, ListingModel, UserList, UserView, UserListView) {
+	ListingModel, UserModel, 
+	ListingResults, UserList, 
+	ListingView, ListingResultsView, UserView, UserListView) {
 	
 	var AppRouter = Backbone.Router.extend({
 		routes: {
@@ -23,7 +27,7 @@ define([
 		
 		initialize: function(){
 			console.log("$$$$$$ router init");
-			
+			this.listingView = new ListingView();  
 			this.userList = new UserList();
 			// this.userModel = new UserModel();
 			// console.log(this.userModel);
@@ -33,7 +37,7 @@ define([
 			Backbone.history.start({pushState: true});
 		},
 		index: function() {
-			this.
+			this.listingView
 			//this.userListView = new UserListView({collection: this.userList});
 			
 		},

@@ -41,7 +41,7 @@ function($, _, Backbone, BackboneForms, ListingResults, ListingModel, ListingVie
 		},
 		listingDetails: function (event) {
 			var id = $(event.target).closest(".thumbnail").attr("data-id");
-			this.listingModel = this.collection.get(id);
+			this.listingModel = new ListingModel();
       		var form = new Backbone.Form({
         		model: this.listingModel
     		}).render();

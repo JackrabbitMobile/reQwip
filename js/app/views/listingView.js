@@ -12,7 +12,7 @@ function($, _, Backbone, BackboneForms, ListingModel) {
 		  	console.log("init listingview");
 		  	
 		  	console.dir(this.el);
-		  	
+		  	this.listingModel = new ListingModel();
 		  	var form = new Backbone.Form({
         		model: this.listingModel
     		}).render();
