@@ -58,13 +58,13 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 		},
 		upoadImageField : function () {
 			console.log("upload image")
-			$('#listingPicture').after('<button class="btn btn-primary submit-form" type="button">Add image</button>');
-			$('#listingPicture').hide();	
-			$('#listingPicture').click(onUploadClick);
+			$('#listingPicture').after('<button id="image-upload-btn" class="btn btn-primary submit-form" type="button">Add image</button>');
+			//$('#image-upload-btn').hide();	
+			$('#image-upload-btn').click(onUploadClick);
 			
 			function onSuccess(fpfiles) {
 				console.log(JSON.stringify(fpfiles));
-				$('#Picture').append($(document.createElement('img')).attr("src",fpfiles[0]['url']));
+				$('#image-upload-btn').val($(document.createElement('img')).attr("src",fpfiles[0]['url']));
 			}
 			function onError(fperror) {
 				console.log(JSON.stringify(fperror));
