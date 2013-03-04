@@ -1,7 +1,7 @@
 app = {};
 
 require.config({
-	urlArgs : "bust=v1" + (new Date()).getTime(),
+	urlArgs : "bust=" + (new Date()).getTime(),
 
 	// 3rd party script alias names (Easier to type "jquery" than "libs/jquery-1.8.2.min")
 	paths : {
@@ -13,6 +13,8 @@ require.config({
 		underscore : "libs/underscore-min",
 		backbone : "libs/backbone-min",
 		backfire : "libs/backbone-firebase",
+		backbone_forms : "libs/backbone-forms.min",
+		list : "libs/list.min",
 		firebase : "https://cdn.firebase.com/v0/firebase",
 		localstorage : "libs/backbone.localStorage-min"
 

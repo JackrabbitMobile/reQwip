@@ -1,7 +1,7 @@
 define(['jquery', 'underscore', 'backbone', 'backbone_forms', 'app/collections/userList', 'app/models/userModel',  'app/views/userView'], 
 function($, _, Backbone, BackboneForms, UserList, UserModel, UserView) {
-	console.log("userListView");	
-	var UserListView = Backbone.View.extend({
+	console.log("ListingListView");	
+	var ListingListView = Backbone.View.extend({
 		
 		el : $('#content'),
 		

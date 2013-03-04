@@ -35,12 +35,10 @@ define([
 		index: function() {
 			
 			this.userListView = new UserListView({collection: this.userList});
-			
+			//this.userListView.render();
 		},
 		showUser: function(id) {
 			console.log("------ showuder: "+id);
-			
-				
 		}
 	});
 	

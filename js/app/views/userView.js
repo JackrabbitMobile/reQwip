@@ -8,10 +8,11 @@ function($, _, Backbone, UserModel) {
 
 		template : _.template($("#user-template").html()),
 
-		 initialize : function() {
-		 	console.log("init userview");
-			this.model.on('change', this.render, this);
-		 }, 
+		  initialize : function() {
+		  	console.log("init userview");
+		 	this.model.on('change', this.render, this);
+			this.render();
+		  }, 
 
 		render : function(model) {
 			console.log('render...');
@@ -55,8 +56,7 @@ function($, _, Backbone, UserModel) {
 
 		updateOnEnter : function(e) {
 			console.log("modelView.event.updateOnEnter");
-			if (e.keyCode == 13)
-				this.close();
+			if (e.keyCode == 13) this.close();
 		}
 	});
 /*
