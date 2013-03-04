@@ -51,23 +51,33 @@
 	</head>
 
 	<body>
-	<div id="facebook-auth">
-		<button id="facebook-auth-login" onclick="facebookLogin()">Log in with Facebook</button>
-	</div>
 		<!--[if lt IE 7]>
 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
-		<div class="container">
+		<div class="container-fluid">
 			<header>
-				<img src="img/images.jpeg" />
-				<h1>reQwip - AWwwwSOME sports gear!!!</h1> <h2>Dan will give you a hug!</h2>
+				<div class="navbar navbar-fixed-top">
+				  <div class="navbar-inner">
+  				    <ul class="nav">
+					  <li><a href="#">My Account</a></li>
+  				      <li><a href="#">Log Out</a></li>
+  				    </ul>
+				    <a class="brand" href="#"><img src="img/reqwip_black.png"></a>
+				  </div>
+				</div>
 			</header>
 			<div class="row-fluid">
 				<div id="content">
+					
+					<h1>reQwip - AWwwwSOME sports gear!!!</h1> <h2>Dan will give you a hug!</h2>
 					<h1>nothing new</h1>
 					<ul id="user-list" class="thumbnails">
 						<li><h1>same old list</h1></li>
 					</ul>
+				</div>
+				<img src="img/images.jpeg" />
+				<div id="facebook-auth">
+					<button id="facebook-auth-login" onclick="facebookLogin()">Log in with Facebook</button>
 				</div>
 			</div>
 
