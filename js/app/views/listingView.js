@@ -52,6 +52,9 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 			"click #listing-results" : "allListings"
 		},
 		allListings : function() {
+			$("#page-loader").show();
+			
+			$("#page-loader").hide();
 			return this;
 		},
 		saveListing : function() {
