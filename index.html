@@ -106,6 +106,18 @@
 		
 		<!-- Listing -->
 		<script type="text/template" id="template-listing">
+			<a class="thumbnail" data-id="<%= id %>" >
+				<img src="<%= listingPicture %>" alt="">
+				<h4>Price $<%= price %></h4>
+				<h5>Title: <%= title %></h5>
+				<h5>Category: <%= category %></h5>
+				<h5>Description: <%= description %></h5>
+				<h5>Condition Rating: <%= status %></h5>
+			</a>
+		</script>
+		
+		<!-- Listing Hit -->
+		<script type="text/template" id="template-listing-hit">
 			<a class="thumbnail" data-id="<%= id %>" ><li>
 				<img src="<%= listingPicture %>" alt="">
 				<h4>Price $<%= price %></h4>

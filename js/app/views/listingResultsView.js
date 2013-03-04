@@ -8,12 +8,12 @@ function($, _, Backbone, BackboneForms, ListingResults, ListingModel, ListingVie
 		template : _.template($("#template-listing").html()),
 
 		initialize : function() {
-			 this.$el.html('<ul id="listing-results" class="thumbnails"></ul>');
-			 this.ul = $('#listing-results');
-			 this.collection.on('add', this.addOne, this);
-		 	 this.collection.on('change', this.render, this);
-		 	 this.collection.on('reset', this.render, this);
-		 	 this.render();
+			 // this.$el.html('<ul id="listing-results" class="thumbnails"></ul>');
+			 // this.ul = $('#listing-results');
+			 // this.collection.on('add', this.addOne, this);
+		 	 // this.collection.on('change', this.render, this);
+		 	 // this.collection.on('reset', this.render, this);
+		 	 //this.render();
 		 },
 
 		render : function() {
