@@ -5,19 +5,17 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 
 		el : $('#content'),
 		
-		
+		template_list_hit 	: _.template($("#template-listing-hit").html()),
 		template_list_item 	: _.template($("#template-listing").html()),
 		template_homepage 	: _.template($("#template-homepage").html()),
 
 		  initialize : function() {
 		  	console.log("init listingview");
 		  	this.listingResults = new ListingResults();
-		  	this.listingModel = new ListingModel({id: '1'});
-    		
 		  	
-			
 		 	//this.model.on('change', this.render, this);
 			this.render();
+			return this;
 		  }, 
 		render : function(model) {
 			$("#page-loader").show();
@@ -25,6 +23,14 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
     		$("#page-loader").hide();
     		
 			return this;
+		},
+		
+		events: {
+			"click .brand" : "render",
+			"click .submit-form" : "saveListing",
+			"click #list-item" : "listItem",
+			"click #listing-results" : "allListings",
+			"click #listingResults a" : "displayListing"
 		},
 		listItem: function() {
 			$("#page-loader").show();
@@ -46,30 +52,42 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
     		$("#page-loader").hide();
 			return this;
 		},
-		events: {
-			"click .submit-form" : "saveListing",
-			"click #list-item" : "listItem",
-			"click #listing-results" : "allListings"
-		},
 		allListings : function() {
 			$("#page-loader").show();
-			
+			this.$el.html("<ul id='listingResults' class'thumbnails'></ul>");
+			this.ul = $("#listingResults");
+			this.listingResults.forEach(this.listingHit, this);
 			$("#page-loader").hide();
+			return this;
+		},
+		listingHit : function(listingModel) {
+			console.log(listingModel.id);
+			var attributes = listingModel.toJSON();
+			this.ul.append(this.template_list_hit(attributes));
 			return this;
 		},
 		saveListing : function() {
 			console.log("viewListing");
 			$("#page-loader").show();
-			this.listingModel.set(this.form.getValue());
+			var formData = this.form.getValue();
+			this.listingModel = new ListingModel({id: Math.floor((Math.random()*10000)+1)});
+			this.listingModel.set(formData);
 			console.log(this.listingModel);
-			this.listingResults.add(this.listingModel); 
-			
+			this.listingResults.add(this.listingModel);
 			this.displayListing();
 			$("#page-loader").hide();
 			return this;
 		},
-		displayListing : function() {
+		displayListing : function(e) {
+			
+			if(e && e.target && $(e.target).closest("a").attr("data-id")){
+				console.log($(e.target).closest("a").attr("data-id"));
+			
+				id = $(e.target).closest("a").attr("data-id");
+				this.listingModel = this.listingResults.get(id);
+			}
 			attributes = this.listingModel.toJSON();
+			
 			this.$el.html(this.template_list_item(attributes));
 				
 		},

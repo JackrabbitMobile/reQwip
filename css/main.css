@@ -5,6 +5,10 @@ a {
 	cursor: pointer;
 }
 
+#content {
+margin-top: 60px;
+}
+
 #myModal .editing .view,  #myModal .edit{
     display: none;
 }
