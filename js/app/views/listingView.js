@@ -24,7 +24,7 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 					catagory:      { type: 'Select', options: ['Road Bike', 'Mountain Bike', 'Touring Bike', 'Racing Bike', 'Cruser Bike', 'Clown Bike'] },
 			    	title: 'Text',
 			        price: 'Number',
-			        listing_picture: "Text", // { type: 'List', listType: 'Text' },
+			        listingPicture: "Text", // { type: 'List', listType: 'Text' },
 			        description : "Text",
 			        condition : "Number"
 				}
@@ -45,6 +45,7 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 			console.log(this.listingModel);
 			this.listingResults.add(this.listingModel); 
 			
+			this.displayListing();
 			return this;
 		},
 		displayListing : function() {
