@@ -59,8 +59,8 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 		},
 		upoadImageField : function () {
 			console.log("upload image")
-			$('#listingPicture').after('<img src="" id="listing-img-tag" class="thumbnail" /><button id="image-upload-btn" class="btn btn-primary" type="button">Add image</button>');
-			$('#image-upload-btn').hide();	
+			$('#listingPicture').after('<button id="image-upload-btn" class="btn btn-primary" type="button">Add image</button>');
+			$('#listingPicture').hide();	
 			$('#image-upload-btn').click(onUploadClick);
 			
 			function onSuccess(fpfiles) {
