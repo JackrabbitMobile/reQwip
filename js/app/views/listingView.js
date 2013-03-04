@@ -13,10 +13,13 @@ function($, _, Backbone, BackboneForms, ListingModel) {
 		  	
 		  	console.dir(this.el);
 		  	this.listingModel = new ListingModel();
+		  	console.log(this.listingModel);
 		  	var form = new Backbone.Form({
         		model: this.listingModel
     		}).render();
-    		$this.$el.html(form.el);
+    		this.$el.html(form.el);
+    		$("#page-loader").hide();
+    		
     		
     		form.on('blur', function(form) {
     			form.commit();
@@ -35,7 +38,12 @@ function($, _, Backbone, BackboneForms, ListingModel) {
 			// 			
 			// console.log('[rendered]');
 			return this;
-		}/*,
+		},
+		events: {
+			
+		}
+		
+		/*,
 		events : {
 			"click .view" : "edit",
 			"keypress .edit" : "updateOnEnter",

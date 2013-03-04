@@ -6,6 +6,5 @@ define(['jquery', 'underscore', 'backbone', 'firebase', 'backfire', 'app/models/
 		model : ListingModel,
 		firebase: "https://reqwip-launch.firebaseio.com"
 	});
-	
 	return ListingResults;
 }); 
