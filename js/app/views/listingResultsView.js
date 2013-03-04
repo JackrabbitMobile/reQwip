@@ -5,7 +5,7 @@ function($, _, Backbone, BackboneForms, ListingResults, ListingModel, ListingVie
 		
 		el : $('#content'),
 		
-		template : _.template($("#listing-template").html()),
+		template : _.template($("#template-listing").html()),
 
 		initialize : function() {
 			 this.$el.html('<ul id="listing-results" class="thumbnails"></ul>');

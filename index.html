@@ -98,7 +98,14 @@
 			 */
 		</script>
 		
-		<script type="text/template" id="listing-template">
+		<!-- Homepage -->
+		<script type="text/template" id="template-homepage">
+			<button id="listing-results" class="btn btn-large btn-primary">Search Bikes</button>
+			<button id="list-item" class="btn btn-large btn-primary">Sell Bike</button>
+		</script>
+		
+		<!-- Listing -->
+		<script type="text/template" id="template-listing">
 			<a class="thumbnail" data-id="<%= id %>" ><li>
 				<img src="<%= listingPicture %>" alt="">
 				<h4>Price $<%= price %></h4>

@@ -6,12 +6,12 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 		el : $('#content'),
 		
 		
-		template : _.template($("#listing-template").html()),
+		template_list_item 	: _.template($("#template-listing").html()),
+		template_homepage 	: _.template($("#template-homepage").html()),
 
 		  initialize : function() {
 		  	console.log("init listingview");
 		  	this.listingResults = new ListingResults();
-		  
 		  	this.listingModel = new ListingModel({id: '1'});
     		
 		  	
@@ -20,6 +20,13 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 			this.render();
 		  }, 
 		render : function(model) {
+			
+    		this.$el.html(this.template_homepage());
+    		$("#page-loader").hide();
+    		
+			return this;
+		},
+		listItem: function() {
 			this.form = new Backbone.Form({
         		schema: {
 					category: { type: 'Select', options: ['Road Bike', 'Mountain Bike', 'Touring Bike', 'Racing Bike', 'Cruser Bike', 'Clown Bike'] },
@@ -36,11 +43,11 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
     		this.upoadImageField();
     		//this.uploadPicture
     		$("#page-loader").hide();
-    		
 			return this;
 		},
 		events: {
-			"click .submit-form" : "saveListing"
+			"click .submit-form" : "saveListing",
+			"click #list-item" : "listItem"
 		},
 		saveListing : function() {
 			console.log("viewListing");
@@ -54,7 +61,7 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 		},
 		displayListing : function() {
 			attributes = this.listingModel.toJSON();
-			this.$el.html(this.template(attributes));
+			this.$el.html(this.template_list_item(attributes));
 				
 		},
 		upoadImageField : function () {
