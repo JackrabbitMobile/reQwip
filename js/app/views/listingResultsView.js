@@ -49,14 +49,8 @@ function($, _, Backbone, BackboneForms, ListingResults, ListingModel, ListingVie
     		
     		form.on('blur', function(form) {
     			form.commit();
-    			
-    		
 			});
-			
-		
-			
 		}
-
 	});
 	
 

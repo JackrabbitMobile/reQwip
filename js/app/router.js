@@ -9,9 +9,9 @@
   // ----------
 define([
 	"jquery", "underscore", "backbone", 
-	"app/models/userModel", "app/collections/userList", "app/views/userView", "app/views/userListView"
+	"app/models/userModel", "app/models/listingModel", "app/collections/userList", "app/views/userView", "app/views/userListView"
 ], function($, _, Backbone, 
-	UserModel, UserList, UserView, UserListView) {
+	UserModel, ListingModel, UserList, UserView, UserListView) {
 	
 	var AppRouter = Backbone.Router.extend({
 		routes: {
@@ -33,9 +33,9 @@ define([
 			Backbone.history.start({pushState: true});
 		},
 		index: function() {
+			this.
+			//this.userListView = new UserListView({collection: this.userList});
 			
-			this.userListView = new UserListView({collection: this.userList});
-			//this.userListView.render();
 		},
 		showUser: function(id) {
 			console.log("------ showuder: "+id);
