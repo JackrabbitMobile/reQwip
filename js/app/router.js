@@ -28,7 +28,7 @@ define([
 		initialize: function(){
 			console.log("$$$$$$ router init");
 			this.listingView = new ListingView();  
-			this.userList = new UserList();
+			//this.userList = new UserList();
 			
 			//this.userModel = new UserModel();
 			//console.log(this.userModel);

@@ -5,56 +5,53 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 
 		el : $('#content'),
 		
-
-		//template : _.template($("#listing-template").html()),
+		
+		template : _.template($("#listing-template").html()),
 
 		  initialize : function() {
 		  	console.log("init listingview");
+		  	this.listingResults = new ListingResults();
+		  	this.listingModel = new ListingModel({id: '1'});
+    		
 		  	
-		  	console.dir(this.el);
-		  	console.log(this.listingModel);
-		  	var form = new Backbone.Form({
+			
+		 	//this.model.on('change', this.render, this);
+			this.render();
+		  }, 
+		render : function(model) {
+			this.form = new Backbone.Form({
         		schema: {
 					catagory:      { type: 'Select', options: ['Road Bike', 'Mountain Bike', 'Touring Bike', 'Racing Bike', 'Cruser Bike', 'Clown Bike'] },
 			    	title: 'Text',
 			        price: 'Number',
-			        listing_picture: "Text", // { type: 'List', listType: 'Text' },
+			        listingPicture: "Text", // { type: 'List', listType: 'Text' },
 			        description : "Text",
 			        condition : "Number"
 				}
     		}).render();
-    		this.$el.html(form.el);
+    		this.$el.html(this.form.el);
+    		this.$el.append('<button class="btn btn-primary submit-form" type="button">Save</button>');
     		$("#page-loader").hide();
     		
-    		form.on('blur', function(form) {
-    			//form.commit();
-    			console.log("blur");
-    			console.log(form.getValue());
-    			this.listingModel = new ListingModel({id: '1'});
-    			this.listingModel.set(form.getValue());
-    			this.listingResults = new ListingResults();
-    			console.log(this.listingModel);
-    			this.listingResults.add(this.listingModel); 
-    			
-    			// this.listingModel.sync();
-			});
-			
-		 	//this.model.on('change', this.render, this);
-			//this.render();
-		  }, 
-		render : function(model) {
-			// console.log('render...');
-			// var attributes = this.model.toJSON();
-			// console.dir(attributes);
-			// this.$el.html(this.template(attributes));
-			// this.input = this.$('.edit');
-			// this.body = this.$('.modal-body');
-			// 			
-			// console.log('[rendered]');
 			return this;
 		},
 		events: {
+			"click .submit-form" : "saveListing"
+		},
+		saveListing : function() {
+			console.log("viewListing");
 			
+			this.listingModel.set(this.form.getValue());
+			console.log(this.listingModel);
+			this.listingResults.add(this.listingModel); 
+			
+			this.displayListing();
+			return this;
+		},
+		displayListing : function() {
+			attributes = this.listingModel.toJSON();
+			this.$el.html(this.template(attributes));
+				
 		}
 		
 		/*,
