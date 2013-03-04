@@ -23,6 +23,11 @@ function($, _, Backbone, BackboneForms, ListingModel) {
     		
     		form.on('blur', function(form) {
     			form.commit();
+    			console.log("blur");
+    			console.log(form.getValue());
+    			this.listingModel = new ListingModel(form.getValue());
+    			console.log(this.listingModel);
+    			this.listingModel.sync();
 			});
 			
 		 	//this.model.on('change', this.render, this);

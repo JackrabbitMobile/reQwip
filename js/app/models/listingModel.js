@@ -3,9 +3,8 @@ define(["jquery", "underscore", "backbone", 'backbone_forms'], function($, _, Ba
 var ListingModel = Backbone.Model.extend({
 		
 	schema: {
-        catagory:      { type: 'Select', options: ['Road Bike', 'Mountain Bike', 'Touring Bike', 'Racing Bike', 'Cruser Bike'] },
+        catagory:      { type: 'Select', options: ['Road Bike', 'Mountain Bike', 'Touring Bike', 'Racing Bike', 'Cruser Bike', 'Clown Bike'] },
         title:       'Text',
-        user_id:      'Text',
         price:   'Number',
         listing_picture: "Text", // { type: 'List', listType: 'Text' },
         description : "Text",

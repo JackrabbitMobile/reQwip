@@ -29,6 +29,7 @@ define([
 			console.log("$$$$$$ router init");
 			this.listingView = new ListingView();  
 			this.userList = new UserList();
+			
 			//this.userModel = new UserModel();
 			//console.log(this.userModel);
 			//this.userList.add(this.userModel.toJSON());
