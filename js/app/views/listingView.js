@@ -58,7 +58,7 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 		},
 		allListings : function() {
 			$("#page-loader").show();
-			this.$el.html("<botton class='btn btn-small hompage'><i class='icon-home'></i></botton><ul id='listingResults' class'thumbnails'></ul>");
+			this.$el.html("<ul id='listingResults' class'thumbnails'></ul>");
 			this.ul = $("#listingResults");
 			this.listingResults.forEach(this.listingHit, this);
 			$("#page-loader").hide();
