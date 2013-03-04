@@ -1,5 +1,5 @@
-define(['jquery', 'underscore', 'backbone', 'backbone_forms', 'app/models/listingModel'], 
-function($, _, Backbone, BackboneForms, ListingModel) {
+define(['jquery', 'underscore', 'backbone', 'backbone_forms', 'app/models/listingModel', 'app/collections/listingResults'], 
+function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 
 	var ListingView = Backbone.View.extend({
 
@@ -12,22 +12,31 @@ function($, _, Backbone, BackboneForms, ListingModel) {
 		  	console.log("init listingview");
 		  	
 		  	console.dir(this.el);
-		  	this.listingModel = new ListingModel();
 		  	console.log(this.listingModel);
 		  	var form = new Backbone.Form({
-        		model: this.listingModel
+        		schema: {
+					catagory:      { type: 'Select', options: ['Road Bike', 'Mountain Bike', 'Touring Bike', 'Racing Bike', 'Cruser Bike', 'Clown Bike'] },
+			    	title: 'Text',
+			        price: 'Number',
+			        listing_picture: "Text", // { type: 'List', listType: 'Text' },
+			        description : "Text",
+			        condition : "Number"
+				}
     		}).render();
     		this.$el.html(form.el);
     		$("#page-loader").hide();
     		
-    		
     		form.on('blur', function(form) {
-    			form.commit();
+    			//form.commit();
     			console.log("blur");
     			console.log(form.getValue());
-    			this.listingModel = new ListingModel(form.getValue());
+    			this.listingModel = new ListingModel({id: '1'});
+    			this.listingModel.set(form.getValue());
+    			this.listingResults = new ListingResults();
     			console.log(this.listingModel);
-    			this.listingModel.sync();
+    			this.listingResults.add(this.listingModel); 
+    			
+    			// this.listingModel.sync();
 			});
 			
 		 	//this.model.on('change', this.render, this);
