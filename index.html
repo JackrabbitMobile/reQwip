@@ -108,11 +108,13 @@
 		<script type="text/template" id="template-listing">
 			<a class="thumbnail" data-id="<%= id %>" >
 				<img src="<%= listingPicture %>" alt="">
-				<h4>Price $<%= price %></h4>
-				<h5>Title: <%= title %></h5>
-				<h5>Category: <%= category %></h5>
-				<h5>Description: <%= description %></h5>
-				<h5>Condition Rating: <%= status %></h5>
+<dl class="dl-horizontal">
+				<h3><dt>Price </dt><dd>$<%= price %></dd></h3>
+				<h4><dt>Title: </dt><dd><%= title %></dd></h4>
+				<h4><dt>Category: </dt><dd><%= category %></dd></h4>
+				<h4><dt>Description: </dt><dd><%= description %></dd></h4>
+				<h4><dt>Condition Rating:</dt><dd> <%= status %></dd></h4>
+</dl>
 			</a>
 		</script>
 		
