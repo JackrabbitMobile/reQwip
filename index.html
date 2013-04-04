@@ -77,9 +77,6 @@
 			</div>
 
 			<footer>
-				<small>
-					<a href="http://3daystartup.org/" target="_blank">&copy; reQwip! good job!</a>
-				</small>
 			</footer>
 			
 		</div>
@@ -100,26 +97,40 @@
 		
 		<!-- Homepage -->
 		<script type="text/template" id="template-homepage">
-			<button id="listing-results" class="btn btn-large btn-success">Search Bikes</button>
-			<button id="list-item" class="btn btn-large btn-primary">Sell Bike</button>
+			<div class="home">
+				<h1>Buy and Sell Cycling and Triathlon Gear With Your Community!</h1>
+				<div class="action-bar">
+					<a id="listing-results" class="pull-right">Find Gear</a>
+					<a id="list-item" class="pull-left">Sell Gear</a>
+				</div>
+			</div>
+			<div class="sign-up">
+				<a href="#">Sign up</a> or <a href="#">Log in</a> using Facebook
+			</div>
 		</script>
 		
 		<!-- Listing -->
 		<script type="text/template" id="template-listing">
-			<a class="thumbnail" data-id="<%= id %>" >
-				<h4><dt></dt><dd><%= title %></dd></h4>
-				<h3><dt></dt><dd>$<%= price %></dd></h3>
-				<img src="<%= listingPicture %>" alt="">
+		<div class="secondary-nav">
+			<button type="button" class="btn btn-black">Back to Gear</button>
+			<span class="pull-right price">$<%= price %></span>
+		</div>
+		<span class="thumbnail individual-listing" data-id="<%= id %>">
+			<h4><%= title %></h4>
+			<img src="<%= listingPicture %>" alt="" />
+			<div class="inner">
 				<dl class="dl-horizontal">
-								<dt>Description: </dt><dd><%= description %></dd>
-								<dt>Condition Rating:</dt><dd> <%= status %></dd>
+					<dt>Description: </dt><dd><%= description %></dd>
+					<dt>Condition Rating:</dt><dd> <%= status %></dd>
 				</dl>
 				<button type="button" class="btn btn-blue">Contact seller</button>
 				<div class="action-offer">
 					<button type="button" class="btn btn-green btn-large">BUT IT!</button>
 					<span>or</span>
-					<span><a href="#" class="make-offer">Make an Offer</a>
-			</a>
+					<span><a href="#" class="make-offer">Make an Offer</a></span>
+				</div>
+			</div>
+		</span>
 		</script>
 		
 		<!-- Listing Hit -->

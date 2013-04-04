@@ -11,11 +11,15 @@ header{
 	padding: 5px;
 }
 
-a {
+a,a:hover {
 	cursor: pointer;
+	text-decoration: none;
+}
+body{
+	color: #FFF;
 }
 #content {
-margin: 0px 2.5% 90px;
+margin: 0 0 90px;
 }
 
 .btn.homepage{
@@ -57,9 +61,10 @@ margin: 0px 2.5% 90px;
 	display: block;
 	position:fixed;
 	top: 50%;
-	left: 40%;
+	left: 50%;
 	z-index: 100;
-	
+	margin-left: -110px;
+	margin-top: -20px;
 }
 /* BTNS 8*/
 .btn-blue{
@@ -101,6 +106,21 @@ margin: 0px 2.5% 90px;
 	background-color: #537716;
 	color: #FFF;
 }
+.btn-black{
+	background-color: #212121;
+	background-image: none;
+	box-shadow: none;
+	font-size: 12px;
+	color:#FFF;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	border: 1px solid #000;
+	margin-top: 0px;
+	padding: 3px 10px;
+}
+.btn-black:hover{
+	background-color: #212121;
+	color: #FFF;
+}
 .dl-horizontal{
 	color: #FFF;
 	margin: 3px 0;
@@ -118,6 +138,54 @@ margin: 0px 2.5% 90px;
 .action-offer .make-offer{
 	margin-left: 10px;
 	color: #70A11E	;
+}
+.secondary-nav{
+	background-image: -moz-linear-gradient(top,#383839,#020202);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#383839),to(#020202));
+	background-image: -webkit-linear-gradient(top,#383839,#020202);
+	background-image: -o-linear-gradient(top,#383839,#020202);
+	background-image: linear-gradient(to bottom,#383839,#020202);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#383839',endColorstr='#020202',GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	padding: 8px 14px;
+}
+.secondary-nav .price{
+	color: #FFF;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.home{
+	background: rgba(0, 54, 83, 0.71);
+	padding: 10px 0;
+	margin-top: 40px;
+}
+.home h1{
+	font-size: 20px;
+	font-weight: 300;
+	width: 200px;
+	margin: 0 auto 10px;
+	text-align: center;
+	line-height: 22px;
+}
+.home .action-bar{
+	background: url('../img/home-bar.png') no-repeat center center;
+	height: 101px;
+}
+.action-bar a{
+	color: #063250;
+	font-size: 21px;
+	padding: 39px 12px;
+	font-weight: bold;
+}
+.sign-up{
+	text-align: center;
+	margin-top: 150px;
+	font-size: 18px;
+}
+.sign-up a{
+	color: #79ba42;
 }
 /* ==========================================================================
    Overide bootstap styles
@@ -284,6 +352,12 @@ input[type="color"]:focus,
 .individual-listing .property {
 	float:left;
 	padding: 5px 15px;
+}
+.individual-listing h4{
+	margin: 0 0 10px 16px;
+}
+.individual-listing .inner{
+	padding: 0 5px;
 }
 
 .fixed-bottom {
