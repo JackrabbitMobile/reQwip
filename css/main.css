@@ -18,6 +18,7 @@ a,a:hover {
 }
 body{
 	color: #FFF;
+	font-family: 'Noto Sans', sans-serif;
 }
 #content {
 margin: 0 0 90px;
@@ -165,7 +166,7 @@ margin: 0 0 90px;
 .home h1{
 	font-size: 20px;
 	font-weight: 300;
-	width: 200px;
+	width: 250px;
 	margin: 0 auto 10px;
 	text-align: center;
 	line-height: 22px;
