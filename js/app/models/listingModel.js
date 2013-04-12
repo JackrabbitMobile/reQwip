@@ -10,7 +10,8 @@ var ListingModel = Backbone.Model.extend({
 			'listingPicture': "http://reqwip.jackrabbitmobile.com/img/images.jpeg",
 			'price': 200,
 			'description': "text text text",
-			'condition': 9
+			'condition': 9,
+      'location' : "austin, Texas"
 		}
 	}
 });
