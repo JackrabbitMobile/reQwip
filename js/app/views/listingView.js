@@ -53,7 +53,8 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 			        price: 'Number',
 			        listingPicture: "Text", // { type: 'List', listType: 'Text' },
 			        description : "Text",
-			        condition : "Number"
+			        condition : "Number",
+              location : "Text"
 				}
     		}).render();
     		this.$el.html(this.form.el);
@@ -99,7 +100,7 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 				this.listingModel = this.listingResults.get(id);
 			}
 			attributes = this.listingModel.toJSON();
-			
+
 			this.$el.html(this.template_list_item(attributes));
 				
 		},
