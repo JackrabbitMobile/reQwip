@@ -8,6 +8,7 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 		template_list_hit 	: _.template($("#template-listing-hit").html()),
 		template_list_item 	: _.template($("#template-listing").html()),
 		template_homepage 	: _.template($("#template-homepage").html()),
+		template_buy	 	: _.template($("#template-buy").html()),
 
 		  initialize : function() {
 		  	console.log("init listingview");
@@ -27,7 +28,14 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 			"click .submit-form" : "saveListing",
 			"click #list-item" : "listItem",
 			"click #listing-results" : "allListings",
-			"click #listingResults a" : "displayListing"
+			"click #listingResults a" : "displayListing",
+			"click #buy" : "buyItem"
+		},
+		buyItem: function() {
+			$("#page-loader").show();
+    		this.$el.html(this.template_buy());
+    		$("#page-loader").hide();
+			return this;
 		},
 		homepage: function() {
 			console.log("on the homepage")
