@@ -9,8 +9,16 @@
 </script>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script type='text/javascript'>
+	function userCreated(userid, successful) {
+		if(!successful) {
+			console.log('user ' + userid + ' already existed')
+		}else {
+			console.log('user ' + userid + ' just created')
+		}
+	};
 	function facebookLogin(){
-		var chatRef = new Firebase('https://reqwip-launch.firebaseio.com/');
+		var reqwipURL = 'https://reqwip-launch.firebaseio.com/';
+		var chatRef = new Firebase(reqwipURL);
 		var authClient = new FirebaseAuthClient(chatRef, function(error, user) {
   		if (error) {
     		// an error occurred while attempting login
@@ -18,6 +26,19 @@
 		} else if (user) {
     		// user authenticated with Firebase
     		console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+    		var reqwipUsersURL = reqwipURL + 'users';
+    		var userRef = new Firebase(reqwipUsersURL);
+    		var userData= { "id": user.id, "provider": user.provider};
+    		userRef.child(user.id).transaction(
+    			function(currentUserData) {
+    				if(currentUserData == null) {
+    					return userData;
+    				}
+    			},
+    			function(error, committed) {
+    				userCreated(user.id, committed);
+    			}
+    		);
  	 	} else {
     		// user is logged out
   		}});
