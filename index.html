@@ -146,11 +146,7 @@
 					<dt>Description: </dt><dd><%= description %></dd>
 					<dt>Condition Rating:</dt><dd> <%= condition %></dd>
                     <dt>Location:</dt><dd> <%= location %></dd>
-                    <script>
-                    	var locString= <%= location %>.replace(" ", "+");
-                    	var mapsUrl="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q="+locString+"&amp;aq=&amp;sll=30.27923,-97.742529&amp;sspn=0.062262,0.115528&amp;gl=us&amp;ie=UTF8&amp;hq=&amp;hnear="+locString+"&amp;ll=30.27928,-97.742501&amp;spn=0.007727,0.014441&amp;t=m&amp;z=14&amp;output=embed";
-                    	$("#d1-horizontal").append('<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=mapsUrl></iframe><br /><small><a href=mapsUrl style="color:#0000FF;text-align:left">View Larger Map</a></small>');
-                	</script>
+                    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=<%= location.replace(/ /g, '+') %>&amp;ie=UTF8&amp;hq=&amp;hnear=<%= location.replace(/ /g, '+') %>&amp;t=m&amp;z=14&amp;ll=30.50496,-97.644828&amp;output=embed"></iframe><br />
 				</dl>
 				<a class="btn btn-blue" href="tel:2022778513">Contact seller</a>
 				<div class="action-offer">
