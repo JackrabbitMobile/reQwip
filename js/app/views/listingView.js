@@ -27,7 +27,8 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 			"click .submit-form" : "saveListing",
 			"click #list-item" : "listItem",
 			"click #listing-results" : "allListings",
-			"click #listingResults a" : "displayListing"
+			"click #listingResults a" : "displayListing",
+      "click #back" : "allListings"
 		},
 		homepage: function() {
 			console.log("on the homepage")
