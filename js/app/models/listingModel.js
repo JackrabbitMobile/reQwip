@@ -11,7 +11,8 @@ var ListingModel = Backbone.Model.extend({
 			'price': 200,
 			'description': "text text text",
 			'condition': 9,
-      'location' : "austin, Texas"
+      'location' : "austin, Texas",
+      'phone' : '0000000000'
 		}
 	}
 });

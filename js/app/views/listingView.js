@@ -47,7 +47,8 @@ function($, _, Backbone, BackboneForms, ListingModel, ListingResults) {
 			        listingPicture: "Text", // { type: 'List', listType: 'Text' },
 			        description : "Text",
 			        condition : "Number",
-			    	location : "Text"  
+			    	  location : "Text",
+              phone : 'Text'
 				}
     		}).render();
     		this.$el.html(this.form.el);
